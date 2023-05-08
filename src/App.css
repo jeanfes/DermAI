@@ -1,0 +1,75 @@
+.index-header_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+.logo_container{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo_container img {
+    width: 14px;
+    height: 18px;
+}
+
+.logo_container p {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.4rem;
+    line-height: 18px;
+    background: linear-gradient(96.14deg, #3A8EF6 -10.84%, #6F3AFA 196.74%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-left: 4px;
+}
+
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.nav-container p{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #404040;
+    padding-bottom: 2px;
+}
+
+.nav-container li{
+    display: flex;
+    align-items: center;
+    height: auto;
+    list-style: none;
+    cursor: pointer;
+}
+
+#button_login{
+    background: linear-gradient(96.14deg, #3A8EF6 -10.84%, #6F3AFA 196.74%);
+    padding: 6px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+#button_login p{
+    padding: 0px;
+    color: white;
+    font-weight: 700;
+    border: none!important;
+}
+
+a{
+    text-decoration: none;
+}
+
+.selected {
+    border-bottom: 1px solid #3A8EF6;
+}
