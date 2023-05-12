@@ -12,6 +12,7 @@
 html {
     font-size: 62.5%;
     font-family: 'Poppins', sans-serif;
+    min-width: 320px;
     -webkit-user-select: none;
     /* Safari */
     -moz-user-select: none;
@@ -20,4 +21,29 @@ html {
     /* IE10+/Edge */
     user-select: none;
     /* Standard */
+}
+
+body::-webkit-scrollbar {
+    width: 6px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: white;
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-primario);
+    /* color of the scroll thumb */
+    border-radius: 10px;
+    /* roundness of the scroll thumb */
+    border: 3px solid var(--color-primario);
+    /* creates padding around scroll thumb */
+}
+
+@media (max-width:1024px) {
+    html{
+        font-size: 60%;
+    }
 }

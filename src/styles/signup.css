@@ -1,4 +1,4 @@
-.main_container_login{
+.main_container_signup {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -7,31 +7,31 @@
     padding: 50px 35px;
 }
 
-.section_text_login{
+.section_text_signup {
     width: 50%;
     padding-left: 30px;
 }
 
-.section_text_login h1{
-    width: 80%;
+.section_text_signup h1 {
+    width: 100%;
     font-size: 4rem;
     font-weight: 600;
-    margin-top: 70px;
+    margin-top: 85px;
 }
 
-.section_text_login p{
-    width: 50%;
+.section_text_signup p {
+    width: 70%;
     font-size: 1.8rem;
     font-weight: 500;
     margin-top: 25px;
 }
 
-.section_text_login a{
+.section_text_signup a {
     color: var(--color-primario);
     text-decoration: none;
 }
 
-.section_form_login{
+.section_form_signup {
     width: 450px;
     display: flex;
     flex-direction: column;
@@ -40,7 +40,7 @@
     position: relative;
 }
 
-.section_form_login input{
+.section_form_signup input {
     width: 100%;
     background-color: #d2e9f3;
     padding: 15px;
@@ -50,24 +50,24 @@
     font-size: 1.5rem;
 }
 
-.section_form_login input::placeholder{
+.section_form_signup input::placeholder {
     color: var(--color-secundario);
     font-size: 1.5rem;
     font-weight: 500;
 }
 
-.section_form_login a{
+.section_form_signup a {
     text-decoration: none;
     color: var(--color-secundario);
     font-size: 1.2rem;
     align-self: flex-end;
 }
 
-.container_input_User{
+.container_input_User {
     position: relative;
 }
 
-.container_input_User picture{
+.container_input_User picture {
     position: absolute;
     border-radius: 50%;
     border: 1px solid var(--color-secundario);
@@ -82,16 +82,15 @@
     cursor: pointer;
 }
 
-.container_input_User img{
+.container_input_User img {
     width: 5px;
 }
 
-
-.container_input_password{
+.container_input_password {
     position: relative;
 }
 
-.container_input_password img{
+.container_input_password img {
     position: absolute;
     width: 17px;
     top: 16px;
@@ -100,11 +99,11 @@
     filter: invert(50%);
 }
 
-.section_form_login a:hover{
+.section_form_signup a:hover {
     color: var(--color-primario);
 }
 
-.section_form_login button{
+.section_form_signup button {
     background-color: var(--color-primario);
     padding: 15px;
     border: none;
@@ -115,60 +114,79 @@
     margin-top: 20px;
 }
 
-.section_form_login button:hover{
+.section_form_signup button:hover {
     opacity: 0.8;
     cursor: pointer;
 }
 
-.section_form_login h2{
+.section_form_signup h2 {
     font-size: 3rem;
 }
 
-@media (max-width: 1350px) {
-    .section_text_login h1 {
-        font-size: 3rem;
-    }
-    .section_text_login p {
-        font-size: 1.5rem;
+.container_input_name {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.container_birth_gender{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+#input_birth {
+    color: var(--color-secundario);
+}
+
+#input_birth::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#select_gender{
+    width: 40%;
+    background-color: #d2e9f3;
+    padding: 15px;
+    border-radius: 14px;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    color: var(--color-secundario);
+}
+
+@media (max-width:1150px) {
+    .section_text_signup h1 {
+        font-size: 3.2rem;
     }
 }
 
-@media (max-width: 1050px) {
-    .section_text_login h1 {
-        font-size: 2.8rem;
+@media (max-width:920px) {
+    .section_text_signup h1 {
+        font-size: 2.6rem;
     }
-    .section_text_login p {
-        font-size: 1.3rem;
-    }
-}
-
-@media (max-width: 920px) {
-    .section_text_login p {
-        width: 90%;
+    .section_text_signup p {
+        font-size: 1.6rem;
     }
 }
 
-@media (max-width: 850px) {
-    .main_container_login{
+@media (max-width:850px) {
+    .main_container_signup{
         justify-content: center;
     }
-    .section_text_login{
+    .section_text_signup{
         display: none;
     }
 }
 
 @media (max-width: 500px) {
-    .section_form_login h2 {
+    .section_form_signup h2 {
         font-size: 2.5rem;
     }
-    .main_container_login {
+    .main_container_signup {
         padding: 30px 30px;
     }
-    .section_form_login {
+    .section_form_signup {
         padding: 10px 10px;
     }
 }
-
-
-
-  

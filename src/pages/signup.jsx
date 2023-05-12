@@ -1,11 +1,10 @@
-import "../styles/login.css";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import Delete from "../assets/x.png";
 import HidePasswordIcon from "../assets/hide-password.svg";
 import ShowPasswordIcon from "../assets/show-password.svg";
-
-export function Login() {
+import "../styles/signup.css";
+export function Signup() {
     const [inputUserValue, setInputUserValue] = useState("");
     const [inputPasswordValue, setInputPasswordValue] = useState("");
     const [showPassword, setShowPassword] = useState(false);
@@ -22,35 +21,57 @@ export function Login() {
         setShowPassword(!showPassword);
     };
     return (
-        <main className="main_container_login">
-            <section className="section_text_login">
+        <main className="main_container_signup">
+                        <section className="section_text_signup">
                 <h1 data-aos="fade-right" 
-                    data-aos-duration="600"
+                    data-aos-duration="800"
                     data-aos-anchor-placement="top-bottom"
                     data-aos-once="true">
-                    Inicia sesión con tu cuenta de DermAI
+                    Registrate para acceder a nuestros servicios
                 </h1>
                 <p 
                     data-aos="fade-right" 
                     data-aos-duration="800"
                     data-aos-anchor-placement="top-bottom"
                     data-aos-once="true">
-                    Si no tienes cuenta puedes<br/><Link to="/Registrarse" className={location.pathname === '/Registrarse' ? 'selected' : ''}>Registrarte aqui!</Link></p>
+                    Si ya tienes cuenta puedes<br/><Link to="/Entrar" className={location.pathname === '/Entrar' ? 'selected' : ''}>Iniciar sesion aqui!</Link></p>
             </section>
-            <section className="section_form_login">
-                <h2 data-aos="zoom-up"  data-aos-duration="1000" data-aos-once="true">Bienvenido de nuevo</h2>
+            <section className="section_form_signup">
+                <h2 data-aos="zoom-up"  data-aos-duration="1000" data-aos-once="true">Bienvenido</h2>
+                <div className="container_input_name">
+                    <input
+                        data-aos="fade-left"
+                        data-aos-duration="1000"
+                        data-aos-anchor-placement="top-bottom"
+                        data-aos-once="true"
+                        placeholder="Nombre"
+                        type="text"
+                        name=""
+                        id="input_User_signup"
+                    />
+                    <input
+                        data-aos="fade-left"
+                        data-aos-duration="1200"
+                        data-aos-anchor-placement="top-bottom"
+                        data-aos-once="true"
+                        placeholder="Apellido"
+                        type="text"
+                        name=""
+                        id="input_User_signup"
+                    />
+                </div>
                 <div className="container_input_User">
                     <input
                         value={inputUserValue}
                         onChange={handleInputUserChange}
                         data-aos="fade-left"
-                        data-aos-duration="800"
+                        data-aos-duration="1000"
                         data-aos-anchor-placement="top-bottom"
                         data-aos-once="true"
                         placeholder="Usuario"
                         type="text"
                         name=""
-                        id="input_User_login"
+                        id="input_User_signup"
                     />
                     {inputUserValue.length > 0 && (
                         <picture onClick={UserDeleteClick}>
@@ -69,7 +90,7 @@ export function Login() {
                         placeholder="Contraseña"
                         type={showPassword ? "text" : "password"}
                         name=""
-                        id="input_password_login"
+                        id="input_password_signup"
                     />
                     {inputPasswordValue.length > 0 && (
                         <img
@@ -80,11 +101,35 @@ export function Login() {
                         />
                     )}
                 </div>
+                <div className="container_birth_gender">
+                    <select 
+                    name="select_gender" 
+                    id="select_gender"
+                    type="date"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                    data-aos-anchor-placement="top-bottom"
+                    data-aos-once="true"
+                    >
+                        <option defaultValue="" disabled selected>Genero</option>
+                        <option value="men">Hombre</option>
+                        <option value="women">Mujer</option>
+                        <option value="non-binary">No binario</option>
+                    </select>
+                    <input 
+                    type="date" 
+                    name=""
+                    data-aos="fade-left"
+                    data-aos-duration="1200"
+                    data-aos-anchor-placement="top-bottom"
+                    data-aos-once="true" 
+                    id="input_birth" />
+                </div>
                 <Link data-aos="fade-left" data-aos-duration="1200" data-aos-anchor-placement="top-bottom" data-aos-once="true">
-                    Recuperar contraseña?
+                    Algun problema?
                 </Link>
-                <button>Entrar</button>
+                <button>Registrarse</button>
             </section>
         </main>
-    );
+    )
 }

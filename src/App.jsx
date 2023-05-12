@@ -1,18 +1,14 @@
-import { Routes, Route, Navigate, Link } from "react-router-dom";
+import { Routes, Route, Navigate, Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Loadingscreen } from "./components/loadingscreen/loadingscreen.jsx";
 import { Home } from "./pages/home.jsx";
 import { Login } from "./pages/login.jsx";
-import { Signin } from "./pages/signin.jsx";
+import { Signup } from "./pages/signup.jsx";
 import Logo from "./assets/dermai.jpg";
 import './App.css';
-
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [selectedOption, setSelectedOption] = useState("Home");
-  function handleOptionClick(option) {
-      setSelectedOption(option);
-  }
+  const location = useLocation();
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -31,28 +27,26 @@ function App() {
             </picture>
             <ul className="nav-container">
               <li>
-                <Link to="/"><p className={selectedOption === 'Home' ? 'selected' : ''} onClick={() => handleOptionClick('Home')}>Inicio</p></Link>
+                <Link to="/" className={location.pathname === '/' ? 'selected' : ''}>Inicio</Link>
               </li>
               <li>
-                <Link to="/Entrar"><p className={selectedOption === 'About' ? 'selected' : ''} onClick={() => handleOptionClick('About')}>Entrar</p></Link>
+                <Link to="/Entrar" className={location.pathname === '/Entrar' ? 'selected' : ''}>Entrar</Link>
               </li>
               <li>
-                  <Link to="/Registrarse" id="button_login" className={selectedOption === 'Contact' ? '' : ''} onClick={() => handleOptionClick('Contact')}><p>Registrarse</p></Link>
+                <Link to="/Registrarse" id="button_login" className={location.pathname === '/Registrarse' ? 'selected' : ''}>Registrarse</Link>
               </li>
             </ul>
           </header>
-          <>
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route path="/Entrar" element={<Login/>}/>
-            <Route path="/Registrarse" element={<Signin/>}/>
+            <Route path="/Entrar" element={<Login />} />
+            <Route path="/Registrarse" element={<Signup />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
-          </>
         </div>
       )}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
