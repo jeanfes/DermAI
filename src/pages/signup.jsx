@@ -110,8 +110,8 @@ export function Signup() {
                     data-aos-duration="1000"
                     data-aos-anchor-placement="top-bottom"
                     data-aos-once="true"
+                    defaultValue="men"
                     >
-                        <option defaultValue="" disabled selected>Genero</option>
                         <option value="men">Hombre</option>
                         <option value="women">Mujer</option>
                         <option value="non-binary">No binario</option>

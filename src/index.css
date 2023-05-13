@@ -10,7 +10,7 @@
 }
 
 html {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     font-size: 62.5%;
     font-family: 'Poppins', sans-serif;
@@ -23,6 +23,10 @@ html {
     /* IE10+/Edge */
     user-select: none;
     /* Standard */
+}
+
+body{
+    height: 100vh;
 }
 
 body::-webkit-scrollbar {

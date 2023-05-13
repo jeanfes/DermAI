@@ -3,7 +3,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 25px 50px;
+    background-color: white;
+    padding: 25px 30px;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 999;
 }
 
 .logo_container{
@@ -73,7 +78,7 @@
 
 @media (max-width:760px) {
     .index-header_container{
-        padding-bottom: 0px;
+        padding-bottom: 15px;
     }
 }
 
