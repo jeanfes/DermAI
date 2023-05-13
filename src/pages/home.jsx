@@ -175,7 +175,7 @@ export function Home() {
                         <h4>Soporte</h4>
                         <li>FAQ</li>
                         <li>Ayuda</li>
-                        <li>Reportar bug</li>
+                        <li>Reportar fallo</li>
                     </ul>
                     <ul id="footer_link_contact">
                         <h4>Contactanos</h4>
