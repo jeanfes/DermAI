@@ -34,7 +34,7 @@ export function Signup() {
                     data-aos-duration="800"
                     data-aos-anchor-placement="top-bottom"
                     data-aos-once="true">
-                    Si ya tienes cuenta puedes<br/><Link to="/Entrar" className={location.pathname === '/Entrar' ? 'selected' : ''}>Iniciar sesion aqui!</Link></p>
+                    Si ya tienes cuenta puedes<br/><Link to="/entrar" className={location.pathname === '/entrar' ? 'selected' : ''}>Iniciar sesion aqui!</Link></p>
             </section>
             <section className="section_form_signup">
                 <h2 data-aos="zoom-up"  data-aos-duration="1000" data-aos-once="true">Bienvenido</h2>

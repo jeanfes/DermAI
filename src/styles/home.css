@@ -1,9 +1,10 @@
 .section_img_container {
     width: 100%;
     height: auto;
-    padding: 20px 20px 50px;
+    padding: 20px 0px 60px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-around;
 }
 
@@ -11,20 +12,24 @@
     display: flex;
     flex-direction: column;
     margin-top: 40px;
+    padding-left: 20px;
 }
 
 #one-text {
+    width: 100%;
     font-size: 4.2rem;
     font-weight: 900;
     color: var(--color-primario);
 }
 
 #one-text b {
+    display: block;
+    width: 60%;
     color: black;
 }
 
 #two-text {
-    width: 70%;
+    width: 77%;
     margin-top: 10px;
     font-size: 1.3rem;
     font-weight: 700;
@@ -45,7 +50,7 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 10px;
-    width: 100%;
+    width: 85%;
     height: auto;
     padding: 10px;
     background: #F9F7F7;
@@ -162,7 +167,7 @@
 .section_doctors_container {
     width: 100%;
     height: auto;
-    padding: 50px 20px;
+    padding: 60px 20px;
     display: grid;
     grid-template-areas: "izquierda-arriba derecha"
                          "izquierda-abajo derecha"   ;
@@ -170,9 +175,14 @@
     justify-content: space-around;
 }
 
+.derecha{
+    background-color: #0f55a5;
+}
+
 .title_info_doctors {
     grid-area: izquierda-arriba;
     width: 100%;
+    padding-left: 20px;
 }
 
 .title_info_doctors h3 {
@@ -193,6 +203,7 @@
     width: 320px;
     height: 180px;
     grid-area: izquierda-abajo;
+    padding-left: 20px;
 }
 
 .img_doctors {
@@ -351,6 +362,7 @@
 }
 
 .section_footer{
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -452,6 +464,12 @@
     color: black;
 }
 
+@media (max-width:1450px) {
+    .main_text_home {
+        padding-left: 40px;
+    }
+}
+
 @media (max-width:1024px) {
     .section_footer {
         flex-direction: column;
@@ -508,6 +526,19 @@
     }
     .img_doctors{
         grid-area: derecha;
+    }
+}
+
+@media (max-width:860px) {
+    #one-text{
+        width: 100%;
+        font-size: 3rem;
+    }
+    #one-text b{
+        width: 100%;
+    }
+    #two-text{
+        width: 90%;
     }
 }
 

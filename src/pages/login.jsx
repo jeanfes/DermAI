@@ -35,7 +35,7 @@ export function Login() {
                     data-aos-duration="800"
                     data-aos-anchor-placement="top-bottom"
                     data-aos-once="true">
-                    Si no tienes cuenta puedes<br/><Link to="/Registrarse" className={location.pathname === '/Registrarse' ? 'selected' : ''}>Registrarte aqui!</Link></p>
+                    Si no tienes cuenta puedes<br/><Link to="/registrarse" className={location.pathname === '/registrarse' ? 'selected' : ''}>Registrarte aqui!</Link></p>
             </section>
             <section className="section_form_login">
                 <h2 data-aos="zoom-up"  data-aos-duration="1000" data-aos-once="true">Bienvenido de nuevo</h2>

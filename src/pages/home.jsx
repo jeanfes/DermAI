@@ -73,7 +73,7 @@ export function Home() {
         <main className="main_container_home">
             <section className="section_img_container">
                 <div data-aos="fade-right" data-aos-duration="800" data-aos-once="true" className="main_text_home">
-                    <p id="one-text">Encuentra la solución<br /><b>perfecta para tu piel</b><br /><b>aqui.</b></p>
+                    <p id="one-text">Encuentra la solución <br /> <b>perfecta para tu piel aqui.</b></p>
                     <p id="two-text">Nuestro chatbot personalizado puede responder a tus preguntas y recomendarte los mejores tratamientos para ti.</p>
                     <div className="chatbot_container">
                         <p>¿Tienes alguna pregunta?</p>

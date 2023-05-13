@@ -30,17 +30,17 @@ function App() {
                 <Link to="/" className={location.pathname === '/' ? 'selected' : ''}>Inicio</Link>
               </li>
               <li>
-                <Link to="/Entrar" className={location.pathname === '/Entrar' ? 'selected' : ''}>Entrar</Link>
+                <Link to="/entrar" className={location.pathname === '/entrar' ? 'selected' : ''}>Entrar</Link>
               </li>
               <li>
-                <Link to="/Registrarse" id="button_login" className={location.pathname === '/Registrarse' ? 'selected' : ''}>Registrarse</Link>
+                <Link to="/registrarse" id="button_login" className={location.pathname === '/registrarse' ? 'selected' : ''}>Registrarse</Link>
               </li>
             </ul>
           </header>
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route path="/Entrar" element={<Login />} />
-            <Route path="/Registrarse" element={<Signup />} />
+            <Route path="/entrar" element={<Login />} />
+            <Route path="/registrarse" element={<Signup />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </div>
