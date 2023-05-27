@@ -104,10 +104,22 @@ export function UserDetail() {
                 <p>Nombre de Usuario</p>
                 <input type="text" id="username" name="username" />
             </label>
+            <div>
             <label htmlFor="email">
                 <p>Correo</p>
                 <input type="text" id="email" name="email" />
             </label>
+                <label className="container_id" htmlFor="identification">
+                    <select id="type_identification">
+                      <option value="cc">CC</option>
+                      <option value="pasaporte">Pasaporte</option>
+                      <option value="licencia_conducir">Licencia de conducir</option>
+                      <option value="carnet_identidad">Tarjeta de Identidad</option>
+                    </select>
+                    <p>Identificacion</p>
+                    <input type="text" id="identification" name="identification" />
+                </label>
+            </div>
             <div>
                 <label htmlFor="firstname">
                     <p>Nombre</p>

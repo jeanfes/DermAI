@@ -491,6 +491,24 @@ input[type="number"] {
   appearance: textfield;
 }
 
+.container_id{
+    position: relative;
+}
+
+#type_identification{
+    background-color: transparent;
+    width: 21%;
+    padding: 2px;
+    height: 31px;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+
+#identification{
+    padding-left: 50px;
+}
+
 @media (max-width:520px) {
     .user_logo_container {
         display: none;
