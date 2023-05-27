@@ -152,7 +152,6 @@ export function Home() {
             <section className="section_footer">
                 <div className="footer_logo_container">
                     <img src={Logo} alt="" />
-                    <h3>DermAI</h3>
                     <p>Dermatología a tu disposición, atención <br />personalizada y profesional para el cuidado de tu piel</p>
                     <picture className="img_social_container">
                         <img src={Facebook} alt="facebook" /><img src={Twitter} alt="twitter" /><img src={Instagram} alt="instagram" /><img src={Youtube} alt="youtube" /><img src={Linkedin} alt="linkedin" />

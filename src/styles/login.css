@@ -5,6 +5,7 @@
     width: 100%;
     height: auto;
     padding: 50px 35px;
+    overflow-x: hidden;
 }
 
 .section_text_login{

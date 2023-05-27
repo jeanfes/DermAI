@@ -374,17 +374,6 @@
     height: 60px;
 }
 
-.footer_logo_container h3{
-    font-weight: 900;
-    font-size: 2rem;
-    line-height: 25px;
-    background: linear-gradient(96.14deg, #3A8EF6 -10.84%, #6F3AFA 196.74%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-top: 8px;
-}
-
 .footer_logo_container p{
     width: 80%;
     margin-top: 10px;
@@ -547,7 +536,7 @@
         display: none;
     }
     .main_text_home {
-        width: 80%;
+        width: 90%;
     }
     .footer_links_container {
         gap: 15px;

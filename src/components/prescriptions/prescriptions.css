@@ -1,0 +1,17 @@
+.section_prescriptions {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, auto));
+    justify-content: space-around;
+    align-items: start;
+    column-gap: 10px;
+    row-gap: 30px;
+}
+
+@media (max-width:900px) {
+    .section_prescriptions {
+        grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+    }
+}

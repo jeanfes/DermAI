@@ -1,0 +1,72 @@
+.user_container {
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas:
+        "aside header"
+        "aside routes";
+}
+
+.user-aside_container {
+    grid-area: aside;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    padding: 10px;
+    background: white;
+    padding-right: 0;
+}
+
+.user-header_container {
+    grid-area: header;
+    width: 100%;
+    height: 70px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(235, 235, 235);
+    margin-top: 10px;
+}
+
+.user-routes_container {
+    grid-area: routes;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding-bottom: 10px;
+    overflow-y: auto;
+}
+
+.user-routes_container::-webkit-scrollbar {
+    width: 6px;
+    /* width of the entire scrollbar */
+}
+
+.user-routes_container::-webkit-scrollbar-track {
+    background: white;
+    /* color of the tracking area */
+}
+
+.user-routes_container::-webkit-scrollbar-thumb {
+    background: linear-gradient(96.14deg, #3A8EF6 -10.84%, #6F3AFA 196.74%);
+    /* color of the scroll thumb */
+    border-radius: 10px;
+    /* roundness of the scroll thumb */
+    background: linear-gradient(96.14deg, #3A8EF6 -10.84%, #6F3AFA 196.74%);
+    /* creates padding around scroll thumb */
+}
+
+
+@media (max-width:520px) {
+    .user-aside_container{
+        padding: 4px;
+    }
+}

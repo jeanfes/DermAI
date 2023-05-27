@@ -5,6 +5,7 @@
     width: 100%;
     height: auto;
     padding: 50px 35px;
+    overflow-x: hidden;
 }
 
 .section_text_signup {
@@ -145,7 +146,7 @@
 }
 
 #select_gender{
-    width: 40%;
+    width: 50%;
     background-color: #d2e9f3;
     padding: 15px;
     border-radius: 14px;

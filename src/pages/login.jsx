@@ -1,14 +1,14 @@
 import "../styles/login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import Delete from "../assets/x.png";
 import HidePasswordIcon from "../assets/hide-password.svg";
 import ShowPasswordIcon from "../assets/show-password.svg";
-
 export function Login() {
     const [inputUserValue, setInputUserValue] = useState("");
     const [inputPasswordValue, setInputPasswordValue] = useState("");
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
     const handleInputUserChange = (event) => {
         setInputUserValue(event.target.value);
     };
@@ -20,6 +20,9 @@ export function Login() {
     };
     const PasswordToggle = () => {
         setShowPassword(!showPassword);
+    };
+    const LoginButton = () => {
+        navigate("/user");
     };
     return (
         <main className="main_container_login">
@@ -83,7 +86,7 @@ export function Login() {
                 <Link data-aos="fade-left" data-aos-duration="1200" data-aos-anchor-placement="top-bottom" data-aos-once="true">
                     Recuperar contraseña?
                 </Link>
-                <button>Entrar</button>
+                <button onClick={LoginButton}>Entrar</button>
             </section>
         </main>
     );
